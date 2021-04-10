@@ -1,0 +1,12 @@
+23:47:13.114 [main] {Iteration: 1} INFO  Main - Zöld erdőben jártam
+23:47:13.116 [main] {Iteration: 1} TRACE Main - Kék ibolyát láttam
+23:47:13.117 [main] {Iteration: 1} WARN  Main - El akart hervadni
+23:47:13.117 [main] {Iteration: 1} DEBUG Main - Szabad-e locsolni?
+23:47:14.117 [main] {Iteration: 2} INFO  Main - Zöld erdőben jártam
+23:47:14.118 [main] {Iteration: 2} TRACE Main - Kék ibolyát láttam
+23:47:14.118 [main] {Iteration: 2} WARN  Main - El akart hervadni
+23:47:14.118 [main] {Iteration: 2} DEBUG Main - Szabad-e locsolni?
+23:47:15.119 [main] {Iteration: 3} INFO  Main - Zöld erdőben jártam
+23:47:15.119 [main] {Iteration: 3} TRACE Main - Kék ibolyát láttam
+23:47:15.119 [main] {Iteration: 3} WARN  Main - El akart hervadni
+23:47:15.119 [main] {Iteration: 3} DEBUG Main - Szabad-e locsolni?

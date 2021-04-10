@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info">
+    <Properties>
+        <Property name="LOG_PATTERN">%d{HH:mm:ss.SSS} [%t] {Iteration: %X{iterationNumber}} %-5level %logger{36} - %msg%n</Property>
+    </Properties>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%highlight{${LOG_PATTERN}}"/>
+        </Console>
+
+        <File name="Kijelentések" fileName="Kijelentések.log" append="false">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+            <Filters>
+                <TimeFilter start="20:00:00" end="05:00:00" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <MarkerFilter marker="KIJELENTES" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+        </File>
+
+        <File name="Kérelmek" fileName="Kérelmek.log" append="false">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+            <Filters>
+                <TimeFilter start="20:00:00" end="05:00:00" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <MarkerFilter marker="KERELEM" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+        </File>
+
+        <File name="NoMarkers" fileName="NoMarkers.log" append="false">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+            <Filters>
+                <TimeFilter start="20:00:00" end="05:00:00" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <NoMarkerFilter onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+        </File>
+
+        <File name="Győrfi_Pál" fileName="Győrfi_Pál.log" append="false">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+            <TimeFilter start="20:00:00" end="05:00:00" onMatch="ACCEPT" onMismatch="DENY"/>
+        </File>
+
+    </Appenders>
+
+    <Loggers>
+        <Root level="all">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="Kijelentések"/>
+            <AppenderRef ref="Kérelmek"/>
+            <AppenderRef ref="NoMarkers"/>
+            <AppenderRef ref="Győrfi_Pál"/>
+        </Root>
+    </Loggers>
+</Configuration>
